@@ -1,0 +1,19 @@
+[{
+    "name": "Menu Item1",
+    "items": [{
+        "name": "sub item1"
+    }, {
+        "name": "sub item2"
+    }]
+},
+{
+    "name": "Menu Item2",
+    "items": [{
+        "name": "sub item3"
+    }, {
+        "name": "sub item4"
+    }]
+}, {
+    "name": "Menu Item3"
+}
+]

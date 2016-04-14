@@ -65,4 +65,49 @@ angular.module('menuApp', [])
             replace: true
 
         };
+    })
+    /**
+     * @ngdoc directive
+     * @name myJsonDropdown
+     * displays the dropdown menu picking up data from a json file in 'file' attribute
+     */
+    .directive('myJsonDropdown', function ($compile) {
+        return {
+            //restrict to attributes
+            restrict: 'A',
+            //take file and data parameters
+            scope: {
+              file: '@',
+              data: '@',
+              target: '@'
+            },
+            //reads the file in param and loads the menuItems scope
+            controller: function ($scope, $http) {
+              if ($scope.file)
+              {
+                $http({url: $scope.file}).then(function(data) {
+                    $scope.data = data.data;
+                }).catch(function(error) {
+                    console.log(error);
+                });
+              }
+            },
+            //Adds the compiled dropdown menu to the element's parent
+            link: function(scope, element, attrs, controller, transcludeFn) {
+              scope.$watch('data', function(newval, oldval) {
+                var el = angular.element(
+                  '<ul class="dropdown-menu" id="{{target}}">' +
+                  '<li ng-repeat="item in data" '+
+                    'ng-class="{\'dropdown-submenu\': item.items && item.items.length>0}">' +
+                      '<a href="#" data-toggle="dropdown">{{item.name}}</a>' +
+                      '<my-dropdown ng-if="item.items.length>0" data="item.items">'+
+                      '</my-dropdown>' +
+                  '</li>' +
+                '</ul>');
+                $compile(el)(scope);
+                element.parent().append(el);
+              });
+            },
+            replace: true
+        };
     });
