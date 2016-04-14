@@ -24,8 +24,18 @@ angular.module('menuApp', [])
             },
             //template for navbar
             template:
-                '<div class="navbar navbar-fixed-top">' +
-                  '<div class="navbar-collapse collapse">' +
+                '<nav class="navbar navbar-default navbar-fixed-top">' +
+                 '<div class="container-fluid">' +
+                   '<div class="navbar-header">' +
+                     '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"'+
+                     ' data-target="#navbar-collapse-1" aria-expanded="false">'+
+                      '<span class="icon-bar"></span>'+
+                      '<span class="icon-bar"></span>'+
+                      '<span class="icon-bar"></span>'+
+                     '</button>'+
+                     '<a class="navbar-brand" href="#">Brand</a>'+
+                    '</div>'+
+                    '<div class="navbar-collapse collapse" id="navbar-collapse-1">' +
                     '<ul class="nav navbar-nav">' +
                       '<li ng-repeat="menu in menuItems">' +
                         '<a href="#" data-toggle="dropdown">' +
@@ -35,8 +45,9 @@ angular.module('menuApp', [])
                         '</my-dropdown>' +
                       '</li>' +
                     '</ul>' +
-                  '</div>'+
-                '</div>'
+                    '</div>'+
+                   '</div>'+
+                  '</nav>'
         };
     })
     /**
