@@ -1,0 +1,100 @@
+[
+  {
+    "type":     "category",
+    "display":  "Valuation",
+    "options":  [
+      {
+        "type":     "item",
+        "display":  "Price/Earnings Ratio",
+        "value":    "priceToEarningsD"
+      },
+      {
+        "type":     "item",
+        "display":  "Earnings Yield (Earnings/Price)",
+        "value":    "earningsYieldDaily"
+      },
+      {
+        "type":     "item",
+        "display":  "Price/Book Ratio",
+        "value":    "priceToBookD"
+      },
+      {
+        "type":     "item",
+        "display":  "Price/Sales Ratio",
+        "value":    "priceToSalesD"
+      },
+      {
+        "type":     "item",
+        "display":  "Price/Cash Flow Ratio",
+        "value":    "priceToOperatingCashFlow"
+      },
+      {
+        "type":     "item",
+        "display":  "Dividend Yield",
+        "value":    "dividendYieldD"
+      },
+      {
+        "type":     "item",
+        "display":  "Market Cap/Common Equity",
+        "value":    "marketCapToBookEquityD"
+      },
+      {
+        "type":     "item",
+        "display":  "Market Cap/Revenue",
+        "value":    "marketCapToRevenueD"
+      }
+    ]
+  },
+  {
+    "type":     "category",
+    "display":  "Growth",
+    "options":  [
+      {
+        "type":     "category",
+        "display":  "Book value / Share",
+        "options":  [
+          {
+            "type":     "item",
+            "display":  "Book value / Share 1-Year % Change",
+            "value":    "bookvaluePerShareGrowthOneYearQ"
+          },
+          {
+            "type":     "item",
+            "display":  "Book value / Share 3-Year % Change",
+            "value":    "bookvaluePerShareGrowthThreeYearQ"
+          },
+          {
+            "type":     "item",
+            "display":  "Book value / Share 5-Year % Change",
+            "value":    "bookvaluePerShareGrowthFiveYearQ"
+          }
+        ]
+      },
+      {
+        "type":     "item",
+        "display":  "Dividend Per Share",
+        "value":    "dps"
+      },
+      {
+        "type":     "item",
+        "display":  "Total Equity",
+        "value":    "wsm(3998)"
+      },
+      {
+        "type":     "item",
+        "display":  "Total Assets",
+        "value":    "wsm(3998)"
+      },
+      {
+        "type":     "item",
+        "display":  "Net Sales(Revenue)",
+        "value":    "wsm(1001)"
+      },
+      {
+        "type":     "item",
+        "display":  "Net Income",
+        "value":    "wsm(1651)"
+      }
+    ]
+  }
+]
